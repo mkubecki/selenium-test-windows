@@ -3,19 +3,17 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/mkubecki/selenium-test-windows.git'
+                git branch: 'main', url: 'https://github.com/mkubecki/selenium-test.git'
             }
         }
         stage('Install Dependencies') {
             steps {
-                C:/Users/marci/AppData/Local/Programs/Python/Python312/Scripts/pip.exe install -r requirements.txt
+                sh 'pip3  install -r requirements.txt'
             }
         }
         stage('Run Tests') {
             steps {
-                C:/Users/marci/AppData/Local/Programs/Python/Python312/Scripts/pip.exe install -r requirements.txt
-
-               bat pytest --html=report.html
+                sh '/Library/Frameworks/Python.framework/Versions/3.12/bin/pytest --html=report.html'
             }
         }
     }
@@ -32,4 +30,3 @@ pipeline {
         }
     }
 }
-
