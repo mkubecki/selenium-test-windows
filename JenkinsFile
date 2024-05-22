@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                pip  install -r requirements.txt
+                pip install -r requirements.txt
             }
         }
         stage('Run Tests') {
