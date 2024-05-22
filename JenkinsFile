@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-               \Users\marci\AppData\Local\Programs\Python\Python312\Scripts\pip install -r requirements.txt
+                bat 'C:\\Users\\marci\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pip install -r requirements.txt'
             }
         }
         stage('Run Tests') {
             steps {
-                pytest --html=report.html
+               bat pytest --html=report.html
             }
         }
     }
