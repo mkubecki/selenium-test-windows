@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                bat 'pytest --html=report.html'
+                bat 'C:\\Users\\marci\\AppData\\Local\\Programs\\Python\\Python312\\pytest --html=report.html'
             }
         }
     }
