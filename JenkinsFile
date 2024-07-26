@@ -8,11 +8,11 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                bat 'C:\\Users\\marci\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pip install -r requirements.txt'            }
+                bat 'C:\\Users\\kkleina\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pip install -r requirements.txt'            }
         }
         stage('Run Tests') {
             steps {
-                bat 'C:\\Users\\marci\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pytest --html=report.html'
+                bat 'C:\\Users\\kkleina\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pytest --html=report.html'
             }
         }
     }
